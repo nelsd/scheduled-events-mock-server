@@ -122,7 +122,7 @@ scenarios = {
         "EventSource": "Platform",
         "DurationInSeconds": 9,
     },
-        "Live Migration": {
+    "Live Migration": {
         "EventId": str(uuid.uuid4()),
         "NotBeforeDelayInMinutes": 15,
         "StartedDurationInMinutes": 5,
@@ -223,6 +223,23 @@ scenarios = {
             a root cause can be determined.""",
         "EventSource": "Platform",
         "DurationInSeconds": 9,
+    },
+    # Add scenario for Spot VM Eviction
+    "Spot Eviction": {
+        "EventId": str(uuid.uuid4()),
+        "NotBeforeDelayInMinutes": 15,
+        "StartedDurationInMinutes": 5,
+        "EventStatus": OrderedDict([
+            ("Scheduled", 15),
+            ("Started", 5),
+            ("Completed", 0)
+        ]),
+        "EventType": "Preempt",
+        "Description": "The Virtual Machine will be evicted.",
+        "ScenarioDescription": """This scenario simulates eviction of a Spot Virtual Machine.
+            The Spot Virtual Machine is being deleted (ephemeral disks are lost). This event is made available on a best effort basis""",
+        "EventSource": "Platform",
+        "DurationInSeconds": -1,
     }
     # Add more scenarios as needed
 }
