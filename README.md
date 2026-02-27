@@ -22,14 +22,14 @@ A Flask-based web application for simulating Azure Scheduled Events and IMDS (In
 
 1. Clone this repository:
     ```sh
-    git clone https://github.com/your-org/ScheduledEventsResponder.git
-    cd ScheduledEventsResponder
+    git clone https://github.com/your-org/scheduled-events-mock-server
+    cd scheduled-events-mock-server
     ```
 
 2. Install dependencies:
     ```sh
-    python -m venv .venv    
-    .\.venv\Bin\Activate.ps1 #On PowerShell
+    python -m venv .venv
+    .\.venv\Scripts\Activate.ps1 #On PowerShell
     pip install -r requirements.txt
     ```
 
