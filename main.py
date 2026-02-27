@@ -229,6 +229,10 @@ scenarios = {
         "EventId": str(uuid.uuid4()),
         "NotBeforeDelayInMinutes": 15,
         "StartedDurationInMinutes": 5,
+        "ResourceType": "VirtualMachine",
+        "Resources": [
+            "vm1"
+        ],
         "EventStatus": OrderedDict([
             ("Scheduled", 15),
             ("Started", 5),
